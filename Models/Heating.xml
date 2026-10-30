@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opc:ModelDesign
+  xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns="http://example.com/Heating/"
+  TargetNamespace="http://example.com/Heating/"
+  TargetXmlNamespace="http://example.com/Heating/Types.xsd"
+  TargetVersion="1.0.0"
+  TargetPublicationDate="2026-01-01T00:00:00Z">
+
+  <opc:Namespaces>
+    <opc:Namespace Name="Heating" Prefix="Heating"
+      XmlNamespace="http://example.com/Heating/Types.xsd"
+      XmlPrefix="Heating">http://example.com/Heating/</opc:Namespace>
+    <opc:Namespace Name="OpcUa" Prefix="Opc.Ua"
+      XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd"
+      XmlPrefix="OpcUa">http://opcfoundation.org/UA/</opc:Namespace>
+  </opc:Namespaces>
+
+  <opc:Method SymbolicName="BoostMethodType">
+    <opc:Description>Raises the setpoint and returns the new setpoint.</opc:Description>
+    <opc:InputArguments>
+      <opc:Argument Name="Degrees" DataType="ua:Double">
+        <opc:Description>The number of degrees to add to the setpoint.</opc:Description>
+      </opc:Argument>
+    </opc:InputArguments>
+    <opc:OutputArguments>
+      <opc:Argument Name="NewSetpoint" DataType="ua:Double" />
+    </opc:OutputArguments>
+  </opc:Method>
+
+  <opc:ObjectType SymbolicName="ThermostatType" BaseType="ua:BaseObjectType">
+    <opc:Description>A thermostat that controls the temperature of a room.</opc:Description>
+    <opc:Children>
+      <opc:Variable SymbolicName="Temperature" DataType="ua:Double"
+        AccessLevel="Read" ModellingRule="Mandatory">
+        <opc:Description>The measured temperature in degrees Celsius.</opc:Description>
+      </opc:Variable>
+      <opc:Variable SymbolicName="Setpoint" DataType="ua:Double"
+        AccessLevel="ReadWrite" ModellingRule="Mandatory">
+        <opc:Description>The target temperature in degrees Celsius, from 5 to 30.</opc:Description>
+      </opc:Variable>
+      <opc:Method SymbolicName="Boost" TypeDefinition="BoostMethodType"
+        ModellingRule="Mandatory" />
+    </opc:Children>
+  </opc:ObjectType>
+
+  <opc:Object SymbolicName="Thermostat" TypeDefinition="ThermostatType">
+    <opc:Description>The living-room thermostat.</opc:Description>
+    <opc:References>
+      <opc:Reference IsInverse="true">
+        <opc:ReferenceType>ua:Organizes</opc:ReferenceType>
+        <opc:TargetId>ua:ObjectsFolder</opc:TargetId>
+      </opc:Reference>
+    </opc:References>
+  </opc:Object>
+</opc:ModelDesign>
