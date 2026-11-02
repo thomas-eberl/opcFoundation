@@ -2,16 +2,16 @@
 <opc:ModelDesign
   xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
   xmlns:ua="http://opcfoundation.org/UA/"
-  xmlns="http://example.com/Heating/"
-  TargetNamespace="http://example.com/Heating/"
-  TargetXmlNamespace="http://example.com/Heating/Types.xsd"
+  xmlns="http://messring.de/UA/Heating"
+  TargetNamespace="http://messring.de/UA/Heating"
+  TargetXmlNamespace="http://messring.de/UA/Heating/Types.xsd"
   TargetVersion="1.0.0"
   TargetPublicationDate="2026-01-01T00:00:00Z">
 
   <opc:Namespaces>
     <opc:Namespace Name="Heating" Prefix="Heating"
-      XmlNamespace="http://example.com/Heating/Types.xsd"
-      XmlPrefix="Heating">http://example.com/Heating/</opc:Namespace>
+      XmlNamespace="http://messring.de/UA/Heating/Types.xsd"
+      XmlPrefix="Heating">http://messring.de/UA/Heating</opc:Namespace>
     <opc:Namespace Name="OpcUa" Prefix="Opc.Ua"
       XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd"
       XmlPrefix="OpcUa">http://opcfoundation.org/UA/</opc:Namespace>

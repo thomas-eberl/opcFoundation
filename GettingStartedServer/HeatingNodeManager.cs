@@ -3,7 +3,7 @@ using Opc.Ua.Server.Fluent;
 
 namespace Heating;
 
-[NodeManager(NamespaceUri = "http://example.com/Heating/")]
+[NodeManager(NamespaceUri = "http://messring.de/UA/Heating")]
 public partial class HeatingNodeManager
 {
     private const double MinimumSetpoint = 5.0;
