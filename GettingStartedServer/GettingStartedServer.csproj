@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <AdditionalFiles Include="../Models/Heating.xml" />
+    <AdditionalFiles Include="../Models/Heating.Common.xml" />
   </ItemGroup>
 
 </Project>

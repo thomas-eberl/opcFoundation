@@ -1,0 +1,12 @@
+ThermostatType,1,ObjectType
+ThermostatType_Temperature,2,Variable
+ThermostatType_Setpoint,3,Variable
+ThermostatType_Boost,4,Method
+ThermostatType_Boost_InputArguments,5,Variable
+ThermostatType_Boost_OutputArguments,6,Variable
+Thermostat,7,Object
+Thermostat_Temperature,8,Variable
+Thermostat_Setpoint,9,Variable
+Thermostat_Boost,10,Method
+Thermostat_Boost_InputArguments,11,Variable
+Thermostat_Boost_OutputArguments,12,Variable

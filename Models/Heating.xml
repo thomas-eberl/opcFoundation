@@ -2,6 +2,7 @@
 <opc:ModelDesign
   xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
   xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns:common="http://messring.de/ua"
   xmlns="http://messring.de/UA/Heating"
   TargetNamespace="http://messring.de/UA/Heating"
   TargetXmlNamespace="http://messring.de/UA/Heating/Types.xsd"
@@ -12,27 +13,19 @@
     <opc:Namespace Name="Heating" Prefix="Heating"
       XmlNamespace="http://messring.de/UA/Heating/Types.xsd"
       XmlPrefix="Heating">http://messring.de/UA/Heating</opc:Namespace>
+    <opc:Namespace Name="Common" Prefix="Common"
+      XmlNamespace="http://messring.de/ua/Types.xsd"
+      XmlPrefix="Common">http://messring.de/ua</opc:Namespace>
     <opc:Namespace Name="OpcUa" Prefix="Opc.Ua"
       XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd"
       XmlPrefix="OpcUa">http://opcfoundation.org/UA/</opc:Namespace>
   </opc:Namespaces>
 
-  <opc:Method SymbolicName="BoostMethodType">
-    <opc:Description>Raises the setpoint and returns the new setpoint.</opc:Description>
-    <opc:InputArguments>
-      <opc:Argument Name="Degrees" DataType="ua:Double">
-        <opc:Description>The number of degrees to add to the setpoint.</opc:Description>
-      </opc:Argument>
-    </opc:InputArguments>
-    <opc:OutputArguments>
-      <opc:Argument Name="NewSetpoint" DataType="ua:Double" />
-    </opc:OutputArguments>
-  </opc:Method>
-
   <opc:ObjectType SymbolicName="ThermostatType" BaseType="ua:BaseObjectType">
     <opc:Description>A thermostat that controls the temperature of a room.</opc:Description>
     <opc:Children>
       <opc:Variable SymbolicName="Temperature" DataType="ua:Double"
+        TypeDefinition="common:TemperatureVariableType"
         AccessLevel="Read" ModellingRule="Mandatory">
         <opc:Description>The measured temperature in degrees Celsius.</opc:Description>
       </opc:Variable>
@@ -40,7 +33,7 @@
         AccessLevel="ReadWrite" ModellingRule="Mandatory">
         <opc:Description>The target temperature in degrees Celsius, from 5 to 30.</opc:Description>
       </opc:Variable>
-      <opc:Method SymbolicName="Boost" TypeDefinition="BoostMethodType"
+      <opc:Method SymbolicName="Boost" TypeDefinition="common:BoostMethodType"
         ModellingRule="Mandatory" />
     </opc:Children>
   </opc:ObjectType>

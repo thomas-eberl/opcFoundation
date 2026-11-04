@@ -1,0 +1,13 @@
+<opc:TypeDictionary
+  xmlns:Common="http://messring.de/ua"
+  xmlns:opc="http://opcfoundation.org/BinarySchema/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns:tns="http://messring.de/UA/Heating"
+  DefaultByteOrder="LittleEndian"
+  TargetNamespace="http://messring.de/UA/Heating"
+>
+  <opc:Import Namespace="http://messring.de/ua" Location="Common.BinarySchema.bsd"/>
+  <opc:Import Namespace="http://opcfoundation.org/UA/" Location="Opc.Ua.BinarySchema.bsd"/>
+
+</opc:TypeDictionary>

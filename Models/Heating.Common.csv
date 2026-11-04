@@ -1,0 +1,4 @@
+TemperatureVariableType,1,VariableType
+BoostMethodType,2,Method
+BoostMethodType_InputArguments,3,Variable
+BoostMethodType_OutputArguments,4,Variable

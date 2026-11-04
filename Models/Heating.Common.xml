@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opc:ModelDesign
+	xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
+	xmlns:ua="http://opcfoundation.org/UA/"
+	xmlns="http://messring.de/ua"
+	TargetNamespace="http://messring.de/ua"
+	TargetXmlNamespace="http://messring.de/ua/Types.xsd"
+	TargetVersion="1.0.0"
+	TargetPublicationDate="2026-01-01T00:00:00Z">
+
+	<opc:Namespaces>
+		<opc:Namespace Name="Common" Prefix="Common"
+			XmlNamespace="http://messring.de/ua/Types.xsd"
+			XmlPrefix="Common">http://messring.de/ua</opc:Namespace>
+		<opc:Namespace Name="OpcUa" Prefix="Opc.Ua"
+			XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd"
+			XmlPrefix="OpcUa">http://opcfoundation.org/UA/</opc:Namespace>
+	</opc:Namespaces>
+
+	<opc:VariableType SymbolicName="TemperatureVariableType"
+		BaseType="ua:BaseDataVariableType" DataType="ua:Double">
+		<opc:Description>A temperature value in degrees Celsius.</opc:Description>
+	</opc:VariableType>
+
+	<opc:Method SymbolicName="BoostMethodType">
+		<opc:Description>Raises the setpoint and returns the new setpoint.</opc:Description>
+		<opc:InputArguments>
+			<opc:Argument Name="Degrees" DataType="ua:Double">
+				<opc:Description>The number of degrees to add to the setpoint.</opc:Description>
+			</opc:Argument>
+		</opc:InputArguments>
+		<opc:OutputArguments>
+			<opc:Argument Name="NewSetpoint" DataType="ua:Double" />
+		</opc:OutputArguments>
+	</opc:Method>
+</opc:ModelDesign>

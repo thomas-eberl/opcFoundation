@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uax:ListOfNodeState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">
+  <uax:NamespaceUris>
+    <uax:NamespaceUri>http://messring.de/ua</uax:NamespaceUri>
+  </uax:NamespaceUris>
+  <TemperatureVariableType xmlns="http://messring.de/ua">
+    <uax:NodeClass>VariableType_16</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=1</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>TemperatureVariableType</uax:Name>
+    </uax:BrowseName>
+    <uax:Description>
+      <uax:Text>A temperature value in degrees Celsius.</uax:Text>
+    </uax:Description>
+    <uax:SuperTypeId>
+      <uax:Identifier>i=63</uax:Identifier>
+    </uax:SuperTypeId>
+    <uax:DataType>
+      <uax:Identifier>i=11</uax:Identifier>
+    </uax:DataType>
+  </TemperatureVariableType>
+</uax:ListOfNodeState>
