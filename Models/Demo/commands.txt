@@ -1,0 +1,3 @@
+Opc.Ua.ModelCompiler compile -d2 ./Models/Demo/Messring.Common.xml -cg ./Models/Demo/Messring.Common.csv -o2 ./Models/Demo/Speedtrap_Generated
+
+Opc.Ua.ModelCompiler compile -d2 ./Models/Demo/Speedtrap.Demo.xml -d2 ./Models/Demo/Messring.Common.xml -cg ./Models/Demo/Speedtrap.Demo.csv -o2 ./Models/Demo/SpeedTrap_Generated
