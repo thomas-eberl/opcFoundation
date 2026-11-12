@@ -2,13 +2,13 @@
   xmlns:Common="http://messring.de/ua/Types.xsd"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
-  xmlns:tns="http://messring.de/UA/Heating/Types.xsd"
-  targetNamespace="http://messring.de/UA/Heating/Types.xsd"
+  xmlns:tns="http://messring.de/ua/Heating/Types.xsd"
+  targetNamespace="http://messring.de/ua/Heating/Types.xsd"
   elementFormDefault="qualified"
 >
   <xs:annotation>
     <xs:appinfo>
-      <ua:Model ModelUri="http://messring.de/UA/Heating" Version="1.0.0" PublicationDate="2026-01-01T00:00:00Z" />
+      <ua:Model ModelUri="http://messring.de/ua/Heating" Version="1.0.0" PublicationDate="2026-01-01T00:00:00Z" />
     </xs:appinfo>
   </xs:annotation>
   

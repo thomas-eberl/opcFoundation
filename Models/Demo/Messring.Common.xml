@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opc:ModelDesign
+  xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns="http://messring.de/ua"
+  TargetNamespace="http://messring.de/ua"
+  TargetXmlNamespace="http://messring.de/ua/Types.xsd"
+  TargetVersion="1.0.0"
+  TargetPublicationDate="2026-01-01T00:00:00Z">
+
+  <opc:Namespaces>
+    <opc:Namespace Name="Common" Prefix="Common"
+      XmlNamespace="http://messring.de/ua/Types.xsd"
+      XmlPrefix="Common">http://messring.de/ua</opc:Namespace>
+    <opc:Namespace Name="OpcUa" Prefix="Opc.Ua"
+      XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd"
+      XmlPrefix="OpcUa">http://opcfoundation.org/UA/</opc:Namespace>
+  </opc:Namespaces>
+
+  <!-- ================================================================== -->
+  <!-- SubSystemState                                                      -->
+  <!-- ================================================================== -->
+
+  <opc:DataType SymbolicName="SubSystemState" BaseType="ua:Enumeration">
+    <opc:Description>The lifecycle state of a subsystem.</opc:Description>
+    <opc:Fields>
+      <opc:Field Name="Idle" Identifier="0">
+        <opc:Description>The subsystem is idle and not configured for a run.</opc:Description>
+      </opc:Field>
+      <opc:Field Name="Preparing" Identifier="1">
+        <opc:Description>The subsystem is preparing for a run.</opc:Description>
+      </opc:Field>
+      <opc:Field Name="Armed" Identifier="2">
+        <opc:Description>The subsystem is armed.</opc:Description>
+      </opc:Field>
+      <opc:Field Name="ReadyForRun" Identifier="3">
+        <opc:Description>The subsystem is ready to start a run.</opc:Description>
+      </opc:Field>
+      <opc:Field Name="Running" Identifier="4">
+        <opc:Description>The subsystem is running.</opc:Description>
+      </opc:Field>
+      <opc:Field Name="Executed" Identifier="5">
+        <opc:Description>The run has been executed.</opc:Description>
+      </opc:Field>
+      <opc:Field Name="Completed" Identifier="6">
+        <opc:Description>The run has completed.</opc:Description>
+      </opc:Field>
+      <opc:Field Name="Aborted" Identifier="7">
+        <opc:Description>The run was aborted.</opc:Description>
+      </opc:Field>
+    </opc:Fields>
+  </opc:DataType>
+
+  <!-- ================================================================== -->
+  <!-- ServiceInfoType                                                     -->
+  <!-- ================================================================== -->
+
+  <opc:ObjectType SymbolicName="ServiceInfoType" BaseType="ua:BaseObjectType">
+    <opc:Description>Service and calibration information of a device.</opc:Description>
+    <opc:Children>
+      <opc:Property SymbolicName="LastServiceDate" DataType="ua:DateTime"
+        AccessLevel="ReadWrite" ModellingRule="Mandatory">
+        <opc:Description>The date of the last service.</opc:Description>
+      </opc:Property>
+      <opc:Property SymbolicName="LastCalibrationDate" DataType="ua:DateTime"
+        AccessLevel="ReadWrite" ModellingRule="Mandatory">
+        <opc:Description>The date of the last calibration.</opc:Description>
+      </opc:Property>
+      <opc:Method SymbolicName="Update" ModellingRule="Optional">
+        <opc:Description>Separate entry point for updating the device.</opc:Description>
+      </opc:Method>
+    </opc:Children>
+  </opc:ObjectType>
+
+  <!-- ================================================================== -->
+  <!-- DeviceInfoType                                                      -->
+  <!-- ================================================================== -->
+
+  <opc:ObjectType SymbolicName="DeviceInfoType" BaseType="ua:BaseObjectType">
+    <opc:Description>Common identification information of a MESSRING device.</opc:Description>
+    <opc:Children>
+      <opc:Property SymbolicName="UUIDs" DataType="ua:Guid" ValueRank="Array"
+        AccessLevel="Read" ModellingRule="Mandatory">
+        <opc:Description>List of unique hardware IDs (unique ID of the processor).</opc:Description>
+      </opc:Property>
+      <opc:Property SymbolicName="HRIDs" DataType="ua:String" ValueRank="Array"
+        AccessLevel="ReadWrite" ModellingRule="Mandatory">
+        <opc:Description>List of human-readable IDs (serial numbers).</opc:Description>
+      </opc:Property>
+      <opc:Property SymbolicName="BuildNumbers" DataType="ua:String" ValueRank="Array"
+        AccessLevel="Read" ModellingRule="Mandatory">
+        <opc:Description>List of build numbers.</opc:Description>
+      </opc:Property>
+      <opc:Property SymbolicName="DeviceDescription" DataType="ua:LocalizedText"
+        AccessLevel="Read" ModellingRule="Mandatory">
+        <opc:Description>Describes what the device is.</opc:Description>
+      </opc:Property>
+    </opc:Children>
+  </opc:ObjectType>
+</opc:ModelDesign>

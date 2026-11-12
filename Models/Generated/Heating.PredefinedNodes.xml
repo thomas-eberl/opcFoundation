@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <uax:ListOfNodeState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">
   <uax:NamespaceUris>
-    <uax:NamespaceUri>http://messring.de/UA/Heating</uax:NamespaceUri>
+    <uax:NamespaceUri>http://messring.de/ua/Heating</uax:NamespaceUri>
     <uax:NamespaceUri>http://messring.de/ua</uax:NamespaceUri>
   </uax:NamespaceUris>
-  <ThermostatType xmlns="http://messring.de/UA/Heating">
+  <ThermostatType xmlns="http://messring.de/ua/Heating">
     <uax:NodeClass>ObjectType_8</uax:NodeClass>
     <uax:NodeId>
       <uax:Identifier>ns=1;i=1</uax:Identifier>
@@ -202,7 +202,7 @@
       </OutputArguments>
     </Boost>
   </ThermostatType>
-  <Thermostat xmlns="http://messring.de/UA/Heating">
+  <Thermostat xmlns="http://messring.de/ua/Heating">
     <uax:NodeClass>Object_1</uax:NodeClass>
     <uax:NodeId>
       <uax:Identifier>ns=1;i=7</uax:Identifier>

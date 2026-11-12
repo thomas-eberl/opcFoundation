@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opc:ModelDesign
+  xmlns:opc="http://opcfoundation.org/UA/ModelDesign.xsd"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns:common="http://messring.de/ua"
+  xmlns="http://messring.de/ua/speedtrap"
+  TargetNamespace="http://messring.de/ua/speedtrap"
+  TargetXmlNamespace="http://messring.de/ua/speedtrap/Types.xsd"
+  TargetVersion="1.0.0"
+  TargetPublicationDate="2026-01-01T00:00:00Z">
+
+  <opc:Namespaces>
+    <opc:Namespace Name="Speedtrap" Prefix="Speedtrap"
+      XmlNamespace="http://messring.de/ua/speedtrap/Types.xsd"
+      XmlPrefix="Speedtrap">http://messring.de/ua/speedtrap</opc:Namespace>
+    <opc:Namespace Name="Common" Prefix="Common"
+      XmlNamespace="http://messring.de/ua/Types.xsd"
+      XmlPrefix="Common">http://messring.de/ua</opc:Namespace>
+    <opc:Namespace Name="OpcUa" Prefix="Opc.Ua"
+      XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd"
+      XmlPrefix="OpcUa">http://opcfoundation.org/UA/</opc:Namespace>
+  </opc:Namespaces>
+
+  <opc:ObjectType SymbolicName="SpeedtrapType" BaseType="ua:BaseObjectType">
+    <opc:Description>The new MESSRING ThreeBeamSpeedtrap.</opc:Description>
+    <opc:Children>
+      <opc:Object SymbolicName="DeviceInfo" TypeDefinition="common:DeviceInfoType"
+        ModellingRule="Mandatory">
+        <opc:Description>Common device identification and service information.</opc:Description>
+      </opc:Object>
+      <opc:Object SymbolicName="ServiceInfo" TypeDefinition="common:ServiceInfoType"
+        ModellingRule="Mandatory">
+        <opc:Description>Service information of the Speedtrap device.</opc:Description>
+      </opc:Object>
+      <opc:Variable SymbolicName="State" DataType="common:SubSystemState"
+        AccessLevel="Read" ModellingRule="Mandatory">
+        <opc:Description>The current state of the Speedtrap subsystem.</opc:Description>
+      </opc:Variable>
+      <!-- Speedtrap-specific fields: to be defined here -->
+    </opc:Children>
+  </opc:ObjectType>
+
+  <opc:Object SymbolicName="Speedtrap" TypeDefinition="SpeedtrapType">
+    <opc:Description>The Speedtrap device.</opc:Description>
+    <opc:References>
+      <opc:Reference IsInverse="true">
+        <opc:ReferenceType>ua:Organizes</opc:ReferenceType>
+        <opc:TargetId>ua:ObjectsFolder</opc:TargetId>
+      </opc:Reference>
+    </opc:References>
+  </opc:Object>
+</opc:ModelDesign>

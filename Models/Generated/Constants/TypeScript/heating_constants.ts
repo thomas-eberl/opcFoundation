@@ -1,4 +1,4 @@
-export const NS = 'http://messring.de/UA/Heating';
+export const NS = 'http://messring.de/ua/Heating';
 
 export class BrowseNames {
    static readonly Boost: string = 'Boost'

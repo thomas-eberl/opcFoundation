@@ -9,7 +9,7 @@ namespace Heating.WebApi
     public static class Namespaces
     {
         /// <remarks />
-        public const string Uri = "http://messring.de/UA/Heating";
+        public const string Uri = "http://messring.de/ua/Heating";
     }
 
     /// <summary>

@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" LastModified="2026-01-01T00:00:00Z" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
   <NamespaceUris>
-    <Uri>http://messring.de/UA/Heating</Uri>
+    <Uri>http://messring.de/ua/Heating</Uri>
     <Uri>http://messring.de/ua</Uri>
+    <Uri>http://messring.de/UA/Heating</Uri>
   </NamespaceUris>
   <Models>
-    <Model ModelUri="http://messring.de/UA/Heating" XmlSchemaUri="http://messring.de/UA/Heating/Types.xsd" Version="1.0.0" PublicationDate="2026-01-01T00:00:00Z" ModelVersion="1.0.0">
+    <Model ModelUri="http://messring.de/ua/Heating" XmlSchemaUri="http://messring.de/ua/Heating/Types.xsd" Version="1.0.0" PublicationDate="2026-01-01T00:00:00Z" ModelVersion="1.0.0">
       <RequiredModel ModelUri="http://messring.de/ua" XmlSchemaUri="http://messring.de/ua/Types.xsd" />
       <RequiredModel ModelUri="http://opcfoundation.org/UA/" XmlSchemaUri="http://opcfoundation.org/UA/2008/02/Types.xsd" />
     </Model>

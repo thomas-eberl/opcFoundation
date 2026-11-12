@@ -180,12 +180,12 @@ namespace Heating
         /// <summary>
         /// The URI for the Heating namespace (.NET code namespace is 'Heating').
         /// </summary>
-        public const string Heating = "http://messring.de/UA/Heating";
+        public const string Heating = "http://messring.de/ua/Heating";
 
         /// <summary>
         /// The URI for the HeatingXsd namespace (.NET code namespace is 'Heating').
         /// </summary>
-        public const string HeatingXsd = "http://messring.de/UA/Heating/Types.xsd";
+        public const string HeatingXsd = "http://messring.de/ua/Heating/Types.xsd";
 
         /// <summary>
         /// The URI for the Common namespace (.NET code namespace is 'Common').
